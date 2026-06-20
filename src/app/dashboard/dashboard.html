@@ -1,1 +1,13 @@
-<p>dashboard works!</p>
+<p class="mike">dashboard works!</p>
+
+@if (showHi()) {
+  <h1>hi</h1>
+}
+
+<button (click)="onHeyButtonClick()">Hey</button>
+
+@if ('aaa' === 'aaa') {
+  <h1>Yoooo</h1>
+}
+
+<p>publicString: {{ publicString }}</p>
