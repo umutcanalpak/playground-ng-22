@@ -1,14 +1,15 @@
+<app-child [mySignalInput]="{ name: 'aaa', age: 23}">
+</app-child>
 
 <hr />
 
-<app-child>
+<app-child [mySignalInput]="{ name: 'aaa', age: 23}">
   content projection
 </app-child>
 
 <hr />
 
-<app-child></app-child>
-<app-child />
+<app-child [mySignalInput]="{ name: 'aaa', age: 23}"></app-child>
 
 <hr />
 
