@@ -1,0 +1,11 @@
+<p>detail works!</p>
+
+<p>mySignalInput name: {{ mySignalInput().name }}</p>
+<p>mySignalInput age: {{ mySignalInput().age }}</p>
+
+
+@if (mySignalInput().name) {
+  <p>if</p>
+} @else {
+  <p>else</p>
+}

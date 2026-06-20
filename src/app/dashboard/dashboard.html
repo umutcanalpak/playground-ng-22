@@ -1,24 +1,40 @@
-<app-child [mySignalInput]="{ name: 'aaa', age: 23}">
-</app-child>
+<p>dashboard works!</p>
+
+<div class="test-area">
+
+
+</div>
 
 <hr />
 
-<app-child [mySignalInput]="{ name: 'aaa', age: 23}">
-  content projection
-</app-child>
+myAge(): {{ myAge() }}
+<br>
+<button (click)="updateMyAge()">updateMyAge</button>
+<br>
+<button (click)="updateMyAgeTo5()">updateMyAge</button>
+<br>
+myName(): {{ myName() }}
+<br>
+<button (click)="updateMyName()">updateMyName</button>
 
 <hr />
 
-<app-child [mySignalInput]="{ name: 'aaa', age: 23}"></app-child>
+<app-detail [mySignalInput]="{ name: 'aaa', age: 23 }"> </app-detail>
+
+<hr />
+
+<app-child> content projection </app-child>
+
+<hr />
+
+<app-child></app-child>
+<app-child />
 
 <hr />
 
 aaaaaaaaaa
-<br>
-bbbbbbbbbb
-cccccccccc
-dddddddddd
-
+<br />
+bbbbbbbbbb cccccccccc dddddddddd
 
 @if (showHi()) {
   <h1>hi</h1>
@@ -31,4 +47,3 @@ dddddddddd
 }
 
 <p>publicString: {{ publicString }}</p>
-
