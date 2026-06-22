@@ -23,19 +23,14 @@ export class Dashboard implements OnInit, OnDestroy {
     // effect(() => {
     //   console.log('this.myAge()', this.myAge());
     // });
-
     // effect(() => {
     //   console.log('this.myName()', this.myName());
     // });
-
     // this.intervalObs$ = interval(3000).pipe(startWith(0));
-
     // this.intervalSub = this.intervalObs$.subscribe((intervalVal) => {
     //   console.log('intervalVal:', intervalVal);
     // });
-
     // this.intervalSig = toSignal(this.intervalObs$);
-
     // effect(() => {
     //   console.log('this.intervalSig()', this.intervalSig());
     // });
