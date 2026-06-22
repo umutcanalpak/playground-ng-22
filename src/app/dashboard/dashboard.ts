@@ -18,6 +18,9 @@ export class Dashboard implements OnInit, OnDestroy {
   intervalObs$: Observable<number> = new Observable();
   intervalSub: Subscription = new Subscription();
   intervalSig: Signal<number | undefined> = signal(undefined);
+  myObj = {
+    name: 'mike',
+  };
 
   constructor() {
     // effect(() => {
@@ -40,6 +43,16 @@ export class Dashboard implements OnInit, OnDestroy {
     // let name = 'forsa';
     // this.myFunc((name = 'patra'));
     // console.log('name:', name);
+
+    // console.log('this.myObj: 111', this.myObj);
+    // setTimeout(() => {
+    //   this.myObj.name = 'sally';
+    //   console.log('this.myObj: 222', this.myObj);
+    //   setTimeout(() => {
+    //     this.myObj = { name: 'yuri' };
+    //     console.log('this.myObj: 333', this.myObj);
+    //   }, 3000);
+    // }, 3000);
   }
 
   ngOnDestroy(): void {
