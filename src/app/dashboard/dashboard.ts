@@ -36,7 +36,11 @@ export class Dashboard implements OnInit, OnDestroy {
     // });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // let name = 'forsa';
+    // this.myFunc((name = 'patra'));
+    // console.log('name:', name);
+  }
 
   ngOnDestroy(): void {
     this.intervalSub.unsubscribe();
@@ -65,5 +69,9 @@ export class Dashboard implements OnInit, OnDestroy {
 
   onHeyButtonClick() {
     console.log('onHeyButtonClick triggered', new Date());
+  }
+
+  myFunc(myParam: string) {
+    console.log('myParam:', myParam);
   }
 }
