@@ -54,10 +54,37 @@ export class Dashboard implements OnInit, OnDestroy {
     // }, 3000);
 
     // this.randomTest();
+
+    // this.interfaceTest();
   }
 
   ngOnDestroy(): void {
     this.intervalSub.unsubscribe();
+  }
+
+  interfaceTest(): void {
+    interface HaveName {
+      name: string;
+    }
+
+    interface HaveAge {
+      age: number;
+    }
+
+    interface HaveNameAge {
+      name: string;
+      age: number;
+    }
+
+    function myFunc(obj: HaveNameAge): void {}
+
+    const myObj = {
+      name: 'mike',
+      age: 23,
+      agea: 23
+    };
+
+    myFunc(myObj);
   }
 
   randomTest() {
