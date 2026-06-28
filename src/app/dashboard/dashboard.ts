@@ -43,7 +43,6 @@ export class Dashboard implements OnInit, OnDestroy {
     // let name = 'forsa';
     // this.myFunc((name = 'patra'));
     // console.log('name:', name);
-
     // console.log('this.myObj: 111', this.myObj);
     // setTimeout(() => {
     //   this.myObj.name = 'sally';
@@ -53,10 +52,37 @@ export class Dashboard implements OnInit, OnDestroy {
     //     console.log('this.myObj: 333', this.myObj);
     //   }, 3000);
     // }, 3000);
+
+    // this.randomTest();
   }
 
   ngOnDestroy(): void {
     this.intervalSub.unsubscribe();
+  }
+
+  randomTest() {
+    const obj = {
+      '1': 0,
+      '2': 0,
+      '3': 0,
+      '4': 0,
+      '5': 0,
+    };
+
+    type results = '1' | '2' | '3' | '4' | '5';
+
+    let num: number;
+    let key: results;
+    let count = 0;
+    setInterval(() => {
+      num = Math.floor(Math.random() * 5) + 1;
+      key = num.toString() as results;
+
+      obj[key]++;
+
+      count++;
+      if (count < 999) console.log(obj);
+    }, 10);
   }
 
   updateMyAge() {
