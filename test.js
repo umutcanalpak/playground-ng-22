@@ -1,30 +1,25 @@
-function countUniqueValues(array) {
-    let count = 0;
-
-    for (let i = 0; i < array.length; i++) {
-        const prevElement = array[i - 1];
-        const element = array[i];
-        
-        if (element !== prevElement) {
-            console.log('prevElement: ', prevElement);
-            console.log('element: ', element);
-            console.log('-----------');
-            count++;
-        }
+function maxSubarraySum(arr, length) {
+  for (const num of arr) {
+    if (diffMemory[num]) {
+      return true;
     }
 
-    return count;
+    diffMemory[num - diff] = true;
+    diffMemory[num + diff] = true;
 }
-
+  
+  return false;
+}
 
 let result;
 
-
-result  = countUniqueValues([1,1,1,1,1,2]) // 2
+result = maxSubarraySum([100,200,300,400], 2) // 700
 console.log(result);
-result  = countUniqueValues([1,2,3,4,4,4,7,7,12,12,13]) // 7
+result = maxSubarraySum([1,4,2,10,23,3,1,0,20], 4)  // 39 
 console.log(result);
-result  = countUniqueValues([]) // 0
+result = maxSubarraySum([-3,4,0,-2,6,-1], 2) // 5
 console.log(result);
-result  = countUniqueValues([-2,-1,-1,0,1]) // 4
+result = maxSubarraySum([3,-2,7,-4,1,-1,4,-2,1],2) // 5
+console.log(result);
+result = maxSubarraySum([2,3], 3) // null
 console.log(result);
