@@ -52,9 +52,7 @@ export class Dashboard implements OnInit, OnDestroy {
     //     console.log('this.myObj: 333', this.myObj);
     //   }, 3000);
     // }, 3000);
-
     // this.randomTest();
-
     // this.interfaceTest();
   }
 
@@ -81,7 +79,7 @@ export class Dashboard implements OnInit, OnDestroy {
     const myObj = {
       name: 'mike',
       age: 23,
-      agea: 23
+      agea: 23,
     };
 
     myFunc(myObj);
